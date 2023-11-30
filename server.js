@@ -9,7 +9,7 @@ app.use(express.json());
 app.use('/posts', router)//localhost
 app.use('/comment', router) //localhost
 
-mongoose.connect("mongodb+srv://admin1:FPksa6KIzDlmLd8b@cluster0.tcqj3ix.mongodb.net/Viva?retryWrites=true&w=majority").then(()=>console.log("connect hogya Bhaiyo"))
+mongoose.connect(DATABASE_URL).then(()=>console.log("connect hogya Bhaiyo"))
 .then(()=> {
-    app.listen(5000);
+    app.listen(PORT);
 }).catch((error)=>console.log("Error agya hmmm"));
